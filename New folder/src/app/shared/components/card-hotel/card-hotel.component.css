@@ -1,0 +1,46 @@
+/*@import 'swiper/swiper.min.css';*/
+/*@import 'swiper/modules/pagination/pagination.min.css';*/
+/*@import 'swiper/modules/navigation/navigation.min.css';*/
+
+.container-fluid {
+    padding: 0 80px;
+}
+
+
+.star {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: -52px;
+    right: 4px;
+}
+
+.star img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.star p {
+    width: 14px;
+    position: relative;
+    top: 2px;
+    margin: 0px;
+}
+
+/* .name {
+    font-family: 'Quicksand', sans-serif;
+
+} */
+
+.card-buttom {
+    text-decoration: navajowhite;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.price {
+    font-weight: 500;
+    padding-top: 5px;
+}

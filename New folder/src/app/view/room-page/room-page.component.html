@@ -1,0 +1,64 @@
+<div class="houes-detailes" *ngIf="hotel">
+    <div class="house-title">
+        <h1>{{hotel.name}}</h1>
+        <div class="star">
+            <div>
+
+                <i class="fas fa-star"><mat-icon>grade</mat-icon></i>
+                <i><mat-icon>grade</mat-icon></i>
+                <i><mat-icon>grade</mat-icon></i>
+                <i><mat-icon>grade</mat-icon></i>
+            </div>
+            <div>
+                <span>{{hotel.starCount}} Reviews</span>
+            </div>
+            <div>
+                <p>Location: {{hotel.country}} &nbsp; &nbsp; {{hotel.city}} </p>
+            </div>
+        </div>
+    </div>
+
+    <mat-grid-list cols="4" rowHeight="2:1" gutterSize="2px">
+        <mat-grid-tile *ngFor="let image of hotel.mainImages; let i = index" [rowspan]="i === 0 ? 2 : 1"
+            [colspan]="i === 0 ? 2 : 1">
+            <img *ngIf="i < 5" [src]="image" [alt]="image">
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="small">
+        <h2>{{hotel.rooms[0].name}}</h2>
+        <p>2 gust &nbsp; &nbsp; 2 bebs &nbsp; 1 bathrooms </p>
+        <h4> ${{hotel.rooms[0].price}}/ day</h4>
+    </div>
+    <hr class="line">
+    <div class="bos">
+        <ul class="details-list">
+            <li>Entire Home
+                <span>you will have the enrisd forms.</span>
+            </li>
+            <li>Furry friends welcome
+                <span>Check yourself in with the lockbox.</span>
+            </li>
+            <li>Highly rated Host
+                <span>Bring your pets along for the stay.</span>
+            </li>
+            <li>Self check-in
+                <span>Wendy has received 5-star ratings from 100% of recent guests.</span>
+            </li>
+        </ul>
+        <app-reserve></app-reserve>
+    </div>
+    <hr class="line">
+    <p class="home-desc">
+        {{hotel.description}}
+    </p>
+    <hr class="line">
+
+    <div class="map">
+        <h2>Location on map</h2>
+        <app-map [curentHotel]="hotel"></app-map>
+        <b> {{hotel.country}},{{hotel.city}}</b>
+        <p>it's like a home away forms</p>
+    </div>
+
+</div>

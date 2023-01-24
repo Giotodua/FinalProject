@@ -1,0 +1,21 @@
+<section>
+    <swiper  [slidesPerView]="10" [navigation]="true"  [slidesPerGroup]="20">
+        <ng-container *ngFor="let item of  categories">
+            <ng-template swiperSlide>
+                <a routerLinkActive="active" [routerLink]='["/category", item.id]'>
+                    <img [ngStyle]="{'width':'24px', 'height':'24px','opacity':'0.5'}" [src]="item.icon"
+                         [alt]="item.name"/>
+                    <span class="name">{{item.name}}</span>
+                </a>
+            </ng-template>
+        </ng-container>
+    </swiper>
+    <div class="Filters-1" style="cursor: pointer" (click)="openDialog()">
+        <div class="Filters-2">
+            <button type="button" class="btnssss">Filters</button>
+        </div>
+        <div class="Filters-3">
+            <img src="https://static.thenounproject.com/png/1701541-200.png" alt="">
+        </div>
+    </div>
+</section>

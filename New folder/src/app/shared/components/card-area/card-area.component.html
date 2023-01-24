@@ -1,0 +1,9 @@
+<swiper  [slidesPerView]="1" [navigation]=" true " [pagination]="true" class="mySwiper">
+    <ng-template *ngFor="let image of swiperData" swiperSlide>
+        <div class="hotel-card">
+            <a [routerLink]='["/rooms", itemId]'>
+                <img [src]=getSantizeUrl(image) alt="" />
+            </a>
+        </div>
+    </ng-template>
+</swiper>

@@ -1,0 +1,200 @@
+.houes-detailes {
+    padding: 0 12%;
+}
+
+.house-title {
+    margin-top: 50px;
+}
+
+.house-title h1 {
+    font-weight: 600;
+}
+
+.house-title .star {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.house-title .star div p {
+    margin: 0px;
+}
+
+
+.house-title span {
+    margin: 0 20px;
+}
+
+.house-title i {
+    color: crimson;
+    font-size: 14px;
+}
+
+/* 
+.gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 'first first . .' 'first first . .';
+    margin: 20px 0;
+}
+
+.gallery div img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery-img-1 {
+    grid-area: first;
+} */
+
+.small h3 {
+    font-weight: 500;
+
+}
+
+.small h4 {
+    text-align: right;
+    font-size: 22px;
+
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background: rgb(107, 103, 103);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0 50px;
+}
+
+.check-form {
+    max-width: 30px 0;
+    background: #fff;
+    box-shadow: 0 0 30px rgb(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+
+.check-form label {
+    display: block;
+}
+
+.check-form div {
+    padding: 20px;
+}
+
+.check-form input {
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.check-form button {
+    background: #ff5361;
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 18px;
+    width: 350px;
+    border-radius: 8px;
+    font-size: 16px;
+
+}
+
+.guest-field {
+    flex: 1;
+}
+
+.details-list {
+    list-style: none;
+    max-width: 50px 0;
+    margin: 50px 0;
+}
+
+
+.details-list li {
+    margin-left: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #555;
+    position: relative;
+}
+
+.details-list li span {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.home-desc {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.example-form {
+    min-width: 400px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+
+
+mat-dialog-content {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+
+
+.container {
+    width: 650px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.map {
+    margin: 50px 0;
+}
+
+.map iframe {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.map h3 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.map b {
+    display: block;
+    margin-bottom: 16px;
+
+}
+
+.mat-grid-tile {
+    border-radius: 10px;
+}

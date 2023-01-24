@@ -1,0 +1,22 @@
+@import 'swiper/swiper.min.css';
+@import 'swiper/modules/pagination/pagination.min.css';
+@import 'swiper/modules/navigation/navigation.min.css';
+
+.mySwiper {
+    margin-top: 50px;
+
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px
+}
+
+.mySwiper img {
+    display: block;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}

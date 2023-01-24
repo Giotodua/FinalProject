@@ -1,0 +1,76 @@
+.btn {
+    margin-right: 15px;
+}
+
+svg {
+    color: #FF385C;
+}
+
+.container-fluid {
+    padding: 0px 80px;
+}
+
+.navbar {
+    height: 80px;
+    border-bottom: 0.5px solid #e1d9d9;
+    box-shadow: none;
+
+}
+
+
+.mat-button {
+    width: 77px;
+    height: 42px;
+    padding: 5px 5px 5px 38px;
+    background: transparent;
+    cursor: pointer;
+    margin: 0;
+    text-align: inherit;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 21px;
+    transition: box-shadow 0.2s ease;
+}
+
+.icone-2 svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #717171;
+}
+
+.icone {
+    position: relative;
+    right: 28px;
+    top: 7px;
+
+}
+
+.icone svg {
+    color: #222222;
+}
+
+.icone-2 {
+    position: relative;
+    top: -18px;
+}
+
+#matMenu {
+    background-color: #FF385C;
+}
+
+.mat-menu-content {
+    background-color: white;
+}
+
+.mat-menu-content button {
+    color: black;
+}
+
+/* border-bottom: 0.5px solid #702727;
+    width: 77px;
+    height: 42px;
+    padding: 5px 5px 5px 12px;
+    border-radius: 21px
+px
+; */

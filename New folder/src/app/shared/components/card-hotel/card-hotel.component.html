@@ -1,0 +1,23 @@
+<div *ngIf="hotelService.loading; else elseBlock"
+  class="w-100 min-vh-100 d-flex justify-content-center align-items-center">
+  <div class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div class="d-flex flex-wrap justify-content-between gap-4 container-fluid">
+    <div class="box" *ngFor="let item of hotelService.hotels">
+      <app-card-area [swiperData]="item?.mainImages" [itemId]="item.id"></app-card-area>
+      <a [routerLink]='["/rooms", item.id]' class="card-buttom">
+        <div class="description">
+          <span>{{item.country}},<span>{{item.city}}</span></span>
+          <p class="price"> $366night</p>
+        </div>
+        <div class="star">
+          <img src="https://www.i2symbol.com/images/text-symbols/star-symbol.png" alt="">
+          <p>{{item.starCount}} </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</ng-template>

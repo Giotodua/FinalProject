@@ -1,0 +1,28 @@
+
+<h2 mat-dialog-title>Welcome to Airbnb</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="form login">
+        <h1>Log in or sign up</h1>
+        <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+            <div class="field input-field">
+                <input ngModel name="email" type="email" placeholder="Enter your email" class="input">
+            </div>
+            <div class="field input-field">
+                <input ngModel name="password" type="password" placeholder="password" class="password">
+            </div>
+            <div class="field button-field">
+                <button>Login</button>
+            </div>
+        </form>
+        <div class="line"></div>
+        <div class="media-options">
+            <button (click)="onForgotPasswordBtnClick()" class="filed facebook">
+                <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="">
+                <span>Continue with Google</span>
+            </button>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+
+</mat-dialog-actions>

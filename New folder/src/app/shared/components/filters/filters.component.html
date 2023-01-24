@@ -1,0 +1,118 @@
+<form [formGroup]="filters" (ngSubmit)="filterHandler()">
+
+  <h2 mat-dialog-title>Filters</h2>
+  <mat-dialog-content class="mat-typography">
+    <h1>Price range</h1>
+    <div class="d-flex gap-4">
+      <mat-form-field class="w-100">
+        <input matInput type="number" formControlName="PriceFrom" placeholder="Min price" />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <input matInput type="number" formControlName="PriceTo" placeholder="Max price" />
+      </mat-form-field>
+    </div>
+
+    <hr class="line" />
+
+    <div>
+      <div>
+        <h1>Rooms and beds</h1>
+        <p class="bed">Bedrooms</p>
+      </div>
+      <div class="container-2">
+        <button type="button" class="btn btn-dark" (click)="activeBtn('RoomsCount', '')">Any</button>
+        <button type="button" class="btn" *ngFor="let item of roomsAndBeds" [ngClass]="
+            isActive('RoomsCount', item)
+              ? 'bg-dark text-white'
+              : 'btn-outline-dark'
+          " (click)="activeBtn('RoomsCount', item)">
+          {{ item }}
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <p class="bed">Beds</p>
+      </div>
+      <div class="container-2">
+        <button type="button" class="btn btn-dark" (click)="activeBtn('BedsPerRoomCount', '')">Any</button>
+        <button type="button" class="btn btn-outline-dark" *ngFor="let item of roomsAndBeds" [ngClass]="
+            isActive('BedsPerRoomCount', item)
+              ? 'bg-dark text-white'
+              : 'btn-outline-dark'
+          " (click)="activeBtn('BedsPerRoomCount', item)">
+          {{ item }}
+        </button>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p class="bed">Bathrooms</p>
+      </div>
+      <div class="container-2">
+        <button type="button" class="btn btn-dark" (click)="activeBtn('BathRoomsCount', '')">Any</button>
+        <button type="button" class="btn btn-outline-dark" *ngFor="let item of roomsAndBeds" [ngClass]="
+            isActive('BathRoomsCount', item)
+              ? 'bg-dark text-white'
+              : 'btn-outline-dark'
+          " (click)="activeBtn('BathRoomsCount', item)">
+          {{ item }}
+        </button>
+      </div>
+    </div>
+    <div>
+      <div class="Property">
+        <h1>Type of place</h1>
+      </div>
+      <div class="container-2">
+        <button type="button" class="btn" *ngFor="let p of hotelService.typeOfPlaces" [ngClass]="
+            isActive('TypeOfPlace', p)
+              ? 'bg-dark text-white'
+              : 'btn-outline-dark'
+          " (click)="activeBtn('TypeOfPlace', p)">
+          {{ p }}
+        </button>
+      </div>
+    </div>
+    <div>
+      <div class="Property">
+        <h1>Property type</h1>
+      </div>
+      <div class="min">
+
+        <div class="container-3" *ngFor="let p of hotelService.propertyType" [ngClass]="
+          isActive('PropertyType', p)
+            ? 'bg-dark text-white'
+            : 'btn-outline-dark'
+        " (click)="activeBtn('PropertyType', p)">
+          {{ p }}
+
+          <img src="https://a0.muscache.com/pictures/4d7580e1-4ab2-4d26-a3d6-97f9555ba8f9.jpg" alt="">
+
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <div class="Property">
+        <h1>Host language</h1>
+      </div>
+      <section class="example-section" *ngFor="let lang of hotelService.hostLanguages">
+        <mat-checkbox class="example-margin" (change)="handleLang(lang)"
+          [checked]="isLang(lang)">{{lang}}</mat-checkbox>
+      </section>
+    </div>
+
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <div class="d-flex w-100 justify-content-between mt-4">
+      <button type="button" mat-button (click)="cleanFilter()">
+        clear all
+      </button>
+      <button type="submit" [mat-dialog-close]="true" mat-button class="Show">
+        Show {{ totalHotels }} homes
+      </button>
+    </div>
+  </mat-dialog-actions>
+</form>
